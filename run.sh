@@ -3,7 +3,7 @@
 # Define our logging filename.
 LOGFILE="$PWD"/update.log
 
-cd crump/ || exit
+cd ~/crump/ || exit
 
 # Install Crump's required Python modules.
 pip install -r requirements.txt
