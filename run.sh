@@ -3,14 +3,13 @@
 # Define our logging filename.
 LOGFILE="$PWD"/update.log
 
-cd ~/crump/ || exit
+cd crump/ || exit
 
 # Install Crump's required Python modules.
 pip install -r requirements.txt
 
-# Run crump, generating non-Elasticsearch files.
+# Run Crump, generating non-Elasticsearch files.
 echo "Now moving to running Crump"
-#./test
 ./crump -dt
 if [ $? -ne 0 ]; then
     echo "$(date) [ERROR] Crump generated errors" >> "$LOGFILE"
