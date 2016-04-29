@@ -10,14 +10,14 @@ RUN apt-get update && apt-get install -y \
 	git \
 && rm -rf /var/lib/apt/lists/*
 
-COPY crump/ /root/crump/
+#COPY crump/ /root/crump/
 
 # Download Crump
-#RUN git clone https://github.com/openva/crump.git ~/crump/
+RUN git clone https://github.com/openva/crump.git ~/crump/
 
 # Run our update script
-COPY run.sh /root/run-30.sh
-RUN /root/run-30.sh
+COPY run.sh /root/run.sh
+RUN /root/run.sh
 
 ### MOVE all_records.sqlite.zip OUT OF DOCKER
 ### docker cp <containerId>:/file/path/within/container /host/path/target
