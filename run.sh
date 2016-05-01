@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 # Run Crump, generating non-Elasticsearch files.
 echo "Now moving to running Crump"
-./crump -dt
+./crump -d
 if [ $? -ne 0 ]; then
     echo "$(date) [ERROR] Crump generated errors" >> "$LOGFILE"
     exit
